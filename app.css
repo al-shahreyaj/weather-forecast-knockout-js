@@ -2,32 +2,26 @@
     width: 40%;
     margin: auto;
 }
-
 .big-font{
     font-size: 40px;
     font-weight: bold;
 }
-
 .small-font{
     font-size: large;
     color: rgb(85, 85, 85);
 }
-
 .degree-symbol-big {
     position: absolute;
     font-size: 30px;
     font-weight: bold;
 }
-
 .degree-symbol-small {
     position: absolute;
 }
-
 .temperature-wrapper {
     position: relative;
     display: inline-block;
 }
-
 .bold{
     font-weight: bold;
 }
