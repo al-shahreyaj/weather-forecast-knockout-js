@@ -1,4 +1,3 @@
-/* eslint-disable no-plusplus */
 /* eslint-disable no-undef */
 const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
@@ -68,11 +67,10 @@ function WeatherViewModel() {
           self.mapCurrntWeather(response.current);
 
           self.weatherData([]);
-          for (let i = 0; i < response.forecast.forecastday.length; ++i) {
-            const forecastDay = response.forecast.forecastday[i];
+          response.forecast.forecastday.forEach((forecastDay) => {
             const mappedData = ko.mapping.fromJS(forecastDay);
             self.weatherData.push(mappedData);
-          }
+          });
           self.location(`Location: ${response.location.name}, ${response.location.country}`);
         },
         error(xhr, status, error) {
